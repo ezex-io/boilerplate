@@ -1,6 +1,6 @@
 # Project Title
 
-Simple overview of project.
+Simple overview of the project.
 
 ## Getting Started
 
@@ -8,22 +8,15 @@ Simple overview of project.
 
 Before you begin, ensure you have the following installed:
 
-- **[Rust](https://www.rust-lang.org/)**: The Rust programming language and its package manager, Cargo.
-- **Clippy**: Rust's linter for catching common mistakes (included with Rust).
-- **Rustfmt**: Rust's code formatter (included with Rust).
+- **[Go](https://go.dev/doc/install/)**: The Go programming language.
+- **Development Tools**: run `make devtools` to install necessary tools for development.
 
 ### Build
 
 To build the project, use:
 
 ```bash
-cargo build
-```
-
-For an optimized release build, use:
-
-```bash
-cargo build --release
+make build
 ```
 
 ## Test
@@ -31,21 +24,21 @@ cargo build --release
 To run the tests, use:
 
 ```bash
-cargo test
+make test
 ```
 
 ## Code Quality and Formatting
 
-To automatically format the code according to Rust's style guidelines, run:
+To automatically format the code, run:
 
 ```bash
-cargo fmt
+make fmt
 ```
 
-Run the Rust linter to catch common mistakes and improve code quality:
+Run the linter to catch common mistakes and improve code quality:
 
 ```bash
-cargo clippy
+make check
 ```
 
 ## Contributing

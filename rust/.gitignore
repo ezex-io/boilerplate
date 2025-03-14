@@ -15,3 +15,18 @@
 bin/
 pkg/
 wasm-pack.log
+
+
+# Desktop Services Store for macOS
+.DS_Store
+
+# IDEs
+.idea
+.vscode
+
+# TODO tasks
+todo
+
+# VIM artifacts
+.swp
+.*.sw*
