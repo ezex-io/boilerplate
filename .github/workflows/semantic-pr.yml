@@ -1,4 +1,4 @@
-name: Semantic PR
+name: Semantic PR Validation
 
 on:
   pull_request_target:
@@ -12,9 +12,10 @@ permissions:
   pull-requests: read
 
 jobs:
-  main:
-    name: Validate PR title
+  validate-pr-title:
+    name: Validate PR Title
     runs-on: ubuntu-latest
+
     steps:
       - uses: amannn/action-semantic-pull-request@v5
         env:
@@ -35,9 +36,10 @@ jobs:
           # The subject should not start with an uppercase character and should not end with a period.
           subjectPattern: ^(?![A-Z]).+[^.]$
           subjectPatternError: |
-            The subject "{subject}" cannot start with an uppercase character or end with a period.
+            The subject "{subject}" cannot start with an uppercase letter or end with a period.
 
-      - if: always() && (steps.lint_pr_title.outputs.error_message != null)
+      - name: Notify Invalid PR Title
+        if: always() && (steps.lint_pr_title.outputs.error_message != null)
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           header: pr-title-lint-error
@@ -53,15 +55,15 @@ jobs:
             ${{ steps.lint_pr_title.outputs.error_message }}
             ```
 
-      # Check if the PR contains scope
-      - if: always() && (steps.lint_pr_title.scope != "")
-        run: echo "::warning ::Scope for the PR is missed"
+            Please update the title to comply with the guidelines. Thank you!
 
-      # Delete a previous comment when the issue has been resolved
-      - if: ${{ steps.lint_pr_title.outputs.error_message == null }}
+      - name: Warn Missing Scope
+        if: always() && !steps.lint_pr_title.outputs.scope
+        run: echo "::warning ::The PR title does not include a scope. Consider adding one for better clarity."
+
+      - name: Remove Sticky Comment on Fix
+        if: steps.lint_pr_title.outputs.error_message == null
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           header: pr-title-lint-error
           delete: true
-
-
