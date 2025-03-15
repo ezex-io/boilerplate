@@ -1,33 +1,33 @@
 name: Testing (Typescript)
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
-    pull_request:
-        branches:
-            - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-    linting:
-        runs-on: ubuntu-latest
+  linting:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Install Node.js
-              uses: actions/setup-node@v3
-              with:
-                  node-version: "22.14"
+    steps:
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "22.14"
 
-            - name: Checkout code
-              uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-            - name: Install Dependencies
-              run: |
-                  cd ts
-                  yarn install --frozen-lockfile
+      - name: Install Dependencies
+        run: |
+          cd ts
+          yarn install --frozen-lockfile
 
-            - name: Run Tests
-              run: |
-                  cd ts
-                  yarn test --run
+      - name: Run Tests
+        run: |
+          cd ts
+          yarn test --run

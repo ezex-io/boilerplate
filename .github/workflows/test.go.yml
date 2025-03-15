@@ -1,28 +1,28 @@
 name: Testing (Go)
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
-    pull_request:
-        branches:
-            - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-    linting:
-        runs-on: ubuntu-latest
+  linting:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Install Go
-              uses: actions/setup-go@v5
-              with:
-                  go-version: "stable"
+    steps:
+      - name: Install Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "stable"
 
-            - name: Checkout code
-              uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-            - name: Run Tests
-              run: |
-                  cd go
-                  make test
+      - name: Run Tests
+        run: |
+          cd go
+          make test
