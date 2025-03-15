@@ -1,5 +1,5 @@
 [package]
-name = "project-name"
+name = "rust-boilerplate"
 version = "1.0.0"
 authors = ["ezeX development team"]
 edition = "2024"
