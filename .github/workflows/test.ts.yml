@@ -30,4 +30,4 @@ jobs:
             - name: Run Tests
               run: |
                   cd ts
-                  yarn test:ci
+                  yarn test --run
