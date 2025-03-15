@@ -1,7 +1,13 @@
+// Package main defines the entry point for the program.
 package main
 
-import "fmt"
+import "log"
+
+// Greet returns a greeting message.
+func Greet() string {
+	return "Hello, world!"
+}
 
 func main() {
-	fmt.Println("Hello, world!")
+	log.Println(Greet())
 }

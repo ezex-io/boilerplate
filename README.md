@@ -17,3 +17,16 @@ A **Standardized Boilerplate** for starting new projects quickly and consistentl
 - **Pull Request Template**: Use [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md).
 - **License**: Include the LICENSE file in your project.
 - **Contributing**: Add the CONTRIBUTING.md file to guide contributors.
+
+## Some Notes
+
+### Rust
+
+- For libraries, add `Cargo.lock` into `.gitignore`.
+
+### TypeScript
+
+- We strictly use Yarn as the package manager.
+- We use ??? as the testing framework.
+- We use ??? for linting.
+-

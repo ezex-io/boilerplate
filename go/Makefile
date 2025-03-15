@@ -5,7 +5,7 @@ all: build test
 devtools:
 	@echo "Installing devtools"
 	go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
-    go install mvdan.cc/gofumpt@latest
+	go install mvdan.cc/gofumpt@latest
 
 ########################################
 ### Building

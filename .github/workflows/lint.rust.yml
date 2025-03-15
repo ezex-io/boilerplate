@@ -1,4 +1,4 @@
-name: Testing (Rust)
+name: Lint and Format Check (Rust)
 
 on:
   push:
@@ -22,7 +22,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run Tests
+      - name: Check Formatting
         run: |
-         cd rust
-         cargo test
+          cd rust
+          cargo fmt --check
+
+      - name: Run Clippy
+        run: |
+          cd rust
+          cargo clippy -- -D warnings
+
+
