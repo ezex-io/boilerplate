@@ -39,4 +39,4 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
         run: |
           cd ts
-          yarn publish --dry-run
+          npm publish --dry-run
