@@ -26,6 +26,6 @@ A **Standardized Boilerplate** for starting new projects quickly and consistentl
 
 ### TypeScript
 
--   We strictly use Yarn as the package manager.
--   We use vitest as the testing framework.
--   We use eslint for linting.
+-   We strictly use [Yarn](https://yarnpkg.com/getting-started/install) as the package manager.
+-   We use [Vitest](https://vitest.dev/) as the testing framework.
+-   We use [ESLint](https://eslint.org/) for linting.

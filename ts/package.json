@@ -1,6 +1,9 @@
 {
     "name": "ts-boilerplate",
+    "description": "",
     "version": "1.0.0",
+    "author": "ezeX development team",
+    "license": "MIT",
     "main": "src/index.ts",
     "directories": {
         "doc": "docs"
@@ -11,9 +14,6 @@
         "test": "vitest",
         "test:ci": "vitest --run"
     },
-    "author": "",
-    "license": "ISC",
-    "description": "",
     "devDependencies": {
         "@eslint/js": "^9.22.0",
         "eslint": "^9.22.0",

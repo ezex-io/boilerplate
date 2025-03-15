@@ -1,2 +1,21 @@
 node_modules
 dist
+
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+
+# Desktop Services Store for macOS
+.DS_Store
+
+# IDEs
+.idea
+.vscode
+
+# TODO tasks
+todo
+
+# VIM artifacts
+.swp
+.*.sw*
