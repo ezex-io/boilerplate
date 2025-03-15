@@ -21,16 +21,6 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
-                  # Configure which scopes are allowed (newline-delimited).
-                  # TODO: Add more scope here based on project structure.
-                  scopes: |
-                      github
-                      linter
-                      deps
-                      release
-                      other
-                      docs
-
                   # Configure that a scope must always be provided.
                   requireScope: false
                   # The subject should not start with an uppercase character and should not end with a period.
