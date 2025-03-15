@@ -34,7 +34,7 @@ jobs:
           cd ts
           yarn install --frozen-lockfile
 
-      - name: Dry-run publish to crates.io
+      - name: Dry-run publish to npmjs
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
         run: |
