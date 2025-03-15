@@ -1,35 +1,33 @@
 name: Lint and Format Check (Rust)
 
 on:
-  push:
-    branches:
-      - main
+    push:
+        branches:
+            - main
 
-  pull_request:
-    branches:
-      - main
+    pull_request:
+        branches:
+            - main
 
 jobs:
-  linting:
-    runs-on: ubuntu-latest
+    linting:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
+        steps:
+            - name: Install Rust
+              uses: actions-rs/toolchain@v1
+              with:
+                  toolchain: stable
 
-      - name: Checkout code
-        uses: actions/checkout@v4
+            - name: Checkout code
+              uses: actions/checkout@v4
 
-      - name: Check Formatting
-        run: |
-          cd rust
-          cargo fmt --check
+            - name: Check Formatting
+              run: |
+                  cd rust
+                  cargo fmt --check
 
-      - name: Run Clippy
-        run: |
-          cd rust
-          cargo clippy -- -D warnings
-
-
+            - name: Run Clippy
+              run: |
+                  cd rust
+                  cargo clippy -- -D warnings
