@@ -36,7 +36,7 @@ jobs:
 
       - name: Dry-run publish to crates.io
         env:
-          CARGO_REGISTRY_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}
         run: |
           cd ts
           yarn publish --dry-run
