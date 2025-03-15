@@ -1,4 +1,4 @@
-name: Testing (Go)
+name: Lint and Format Check (Go)
 
 on:
     push:
@@ -22,7 +22,10 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v4
 
-            - name: Run Tests
+            - name: Installing golangci-lint
+              run: go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+
+            - name: Formatting and linting the project
               run: |
                   cd go
-                  make test
+                  make check
