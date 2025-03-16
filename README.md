@@ -48,6 +48,7 @@ We recommend:
 - Using [Vitest](https://vitest.dev/) as the testing framework.
 - Using [gts](https://github.com/google/gts) for linting.
 - Keeping dependencies as low as possible.
+- Avoid using packages like Husky or anything that alters the developer environment.
 
 ### About Tests
 
