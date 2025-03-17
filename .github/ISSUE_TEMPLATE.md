@@ -1,6 +1,6 @@
 ## Description
 
-A clear description of the issue.
+> A clear description of the issue.
 
 ## Steps to Reproduce
 
@@ -10,12 +10,12 @@ A clear description of the issue.
 
 ## Expected Behavior
 
-What you expected to happen.
+> What you expected to happen.
 
 ## Actual Behavior
 
-What actually happened.
+> What actually happened.
 
 ## Additional Information
 
-Any additional information, configuration or data that might be necessary to reproduce the issue.
+> Any additional information, configuration or data that might be necessary to reproduce the issue.
