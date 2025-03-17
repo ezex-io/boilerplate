@@ -1,19 +1,10 @@
 name: Publish to npmjs
 
+# Trigger the workflow only on version tags (e.g., v1.0.0)
 on:
   push:
-    branches:
-      - main
-
-  pull_request:
-    branches:
-      - main
-
-# Trigger the workflow only on version tags (e.g., v1.0.0)
-# on:
-#   push:
-#     tags:
-#       - "v*"
+    tags:
+      - "v*"
 
 jobs:
   publish:
