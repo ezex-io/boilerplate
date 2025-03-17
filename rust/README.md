@@ -50,8 +50,9 @@ cargo clippy
 
 ## Contributing
 
-Contributions to the Pactus blockchain are appreciated.
-Please read the [CONTRIBUTING](./CONTRIBUTING.md) guidelines before submitting a pull request or opening an issue.
+Contributions are most welcome!
+Whether it's code, documentation, or ideas, every contribution makes a difference.
+Please read the [Contributing](CONTRIBUTING.md) guide to get started.
 
 ## License
 
