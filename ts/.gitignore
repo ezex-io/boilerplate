@@ -19,3 +19,6 @@ todo
 # VIM artifacts
 .swp
 .*.sw*
+
+# You can keep yarn.lock to ensure dependency consistency
+# yarn.lock
