@@ -5,6 +5,7 @@
     "author": "ezeX development team",
     "license": "MIT",
     "main": "src/index.ts",
+    "packageManager": "yarn@1.22.22",
     "directories": {
         "doc": "docs"
     },
