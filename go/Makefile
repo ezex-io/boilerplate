@@ -10,7 +10,7 @@ devtools:
 ########################################
 ### Building
 build:
-	go build -o ./build/main ./cmd/main.go
+	go build -o ./build/main ./internal/cmd/main.go
 
 ########################################
 ### Testing
