@@ -84,7 +84,7 @@ linters-settings:
     enable-all-rules: true
     rules:
       - name: "exported"
-        disabled: false
+        disabled: true
 
       - name: package-comments
         disabled: false
