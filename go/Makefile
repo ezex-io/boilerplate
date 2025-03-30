@@ -12,6 +12,9 @@ devtools:
 build:
 	go build -o ./build/main ./internal/cmd/main.go
 
+release:
+	go build -ldflags "-s -w" -trimpath -o  ./build/main ./cmd/main.go
+
 ########################################
 ### Testing
 test:
@@ -25,4 +28,7 @@ fmt:
 check:
 	golangci-lint run --timeout=20m0s
 
-.PHONY: build test
+.PHONY: devtools
+.PHONY: build release
+.PHONY: test
+.PHONY: fmt check
