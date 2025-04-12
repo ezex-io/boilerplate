@@ -63,7 +63,7 @@ linters:
     - stylecheck
     - tagalign
     - tagliatelle
-    - tenv
+    - usetesting
     - testableexamples
     - thelper
     - tparallel
@@ -222,7 +222,7 @@ issues:
         - forbidigo
 
   exclude:
-    - "shadow: declaration of \"err\" shadows"
-    - "builtinShadow: shadowing of predeclared identifier: min"
-    - "builtinShadow: shadowing of predeclared identifier: max"
-    - "builtinShadow: shadowing of predeclared identifier: len"
+    - 'shadow: declaration of "err" shadows'
+    - 'builtinShadow: shadowing of predeclared identifier: min'
+    - 'builtinShadow: shadowing of predeclared identifier: max'
+    - 'builtinShadow: shadowing of predeclared identifier: len'
