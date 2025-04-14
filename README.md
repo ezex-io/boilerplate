@@ -45,8 +45,6 @@ We recommend:
 
 - Following the [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html).
 - Using [Yarn](https://yarnpkg.com/getting-started/install) as the package manager.
-- Using [Vitest](https://vitest.dev/) as the testing framework.
-- Using [gts](https://github.com/google/gts) for linting.
 - Keeping dependencies as low as possible.
 - Avoid using packages like Husky or anything that alters the developer environment.
 
