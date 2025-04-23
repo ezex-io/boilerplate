@@ -26,6 +26,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - uses: Swatinem/rust-cache@v2
+        with:
+          env-vars: "RUST_TOOLCHAIN=${{env.RUST_TOOLCHAIN_NIGHTLY}}"
+
       - name: Check Formatting
         run: |
           cd rust
