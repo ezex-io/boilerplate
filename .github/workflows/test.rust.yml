@@ -1,4 +1,7 @@
 name: Testing (Rust)
+env:
+  CARGO_TERM_COLOR: always
+  RUST_TOOLCHAIN: stable
 permissions:
   contents: read
 
@@ -14,9 +17,9 @@ jobs:
 
     steps:
       - name: Install Rust
-        uses: actions-rs/toolchain@v1
+        uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: stable
+          toolchain: ${{env.RUST_TOOLCHAIN}}
 
       - name: Checkout code
         uses: actions/checkout@v4
