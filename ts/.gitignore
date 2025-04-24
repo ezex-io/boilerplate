@@ -22,3 +22,5 @@ todo
 
 # You can keep yarn.lock to ensure dependency consistency
 # yarn.lock
+
+.env
