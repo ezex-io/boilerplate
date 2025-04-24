@@ -1,4 +1,8 @@
 name: Lint and Format Check (Rust)
+env:
+  CARGO_TERM_COLOR: always
+  RUST_TOOLCHAIN: stable
+  RUST_TOOLCHAIN_NIGHTLY: nightly
 permissions:
   contents: read
 
@@ -14,17 +18,22 @@ jobs:
 
     steps:
       - name: Install Rust
-        uses: actions-rs/toolchain@v1
+        uses: dtolnay/rust-toolchain@nightly
         with:
-          toolchain: stable
+          toolchain: ${{env.RUST_TOOLCHAIN_NIGHTLY}}
+          components: clippy, rustfmt
 
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - uses: Swatinem/rust-cache@v2
+        with:
+          env-vars: "RUST_TOOLCHAIN=${{env.RUST_TOOLCHAIN_NIGHTLY}}"
+
       - name: Check Formatting
         run: |
           cd rust
-          cargo fmt --check
+          cargo +nightly fmt --all -- --check
 
       - name: Run Clippy
         run: |
