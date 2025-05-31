@@ -204,6 +204,7 @@ linters-settings:
       - r # reader
       - w # writer
       - db # database
+      - tx # transaction
 
     ignore-decls:
       - wg sync.WaitGroup
