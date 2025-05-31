@@ -149,7 +149,8 @@ linters-settings:
       - G115
 
   stylecheck:
-    checks: ["all"]
+    # ST1000: at least one file in a package should have a package comment
+    checks: ["all", "-ST1000"]
 
   govet:
     enable-all: true
