@@ -72,9 +72,9 @@ linters:
     - usestdlibvars
     - wastedassign
     - whitespace
-    - wrapcheck
     - zerologlint
     - varnamelen
+    - ireturn
 
 linters-settings:
   gosimple:
