@@ -203,6 +203,7 @@ linters-settings:
       - il
       - r # reader
       - w # writer
+      - db # database
 
     ignore-decls:
       - wg sync.WaitGroup
