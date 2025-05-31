@@ -72,7 +72,7 @@ linters:
     - usestdlibvars
     - wastedassign
     - whitespace
-    - wrapcheck
+    # - wrapcheck
     - zerologlint
     - varnamelen
 
