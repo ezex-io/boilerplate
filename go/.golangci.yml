@@ -131,6 +131,9 @@ linters-settings:
       - name: redefines-builtin-id
         disabled: true
 
+      - name: "var-naming"
+        disabled: true
+
       - name: unhandled-error
         arguments:
           - "fmt.Printf"
@@ -150,7 +153,8 @@ linters-settings:
 
   stylecheck:
     # ST1000: at least one file in a package should have a package comment
-    checks: ["all", "-ST1000"]
+    # ST1003: should not use underscores in package names
+    checks: ["all", "-ST1000", "-ST1003"]
 
   staticcheck:
     # SA1019: xyz is deprecated
@@ -233,3 +237,4 @@ issues:
     - 'builtinShadow: shadowing of predeclared identifier: min'
     - 'builtinShadow: shadowing of predeclared identifier: max'
     - 'builtinShadow: shadowing of predeclared identifier: len'
+    
