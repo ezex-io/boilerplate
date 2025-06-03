@@ -132,7 +132,8 @@ linters-settings:
         disabled: true
 
       - name: "var-naming"
-        disabled: true
+        arguments:
+          - ["package"] # exclude package names from checking
 
       - name: unhandled-error
         arguments:
@@ -237,4 +238,5 @@ issues:
     - 'builtinShadow: shadowing of predeclared identifier: min'
     - 'builtinShadow: shadowing of predeclared identifier: max'
     - 'builtinShadow: shadowing of predeclared identifier: len'
+    
     
